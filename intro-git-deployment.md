@@ -1,13 +1,16 @@
 # Introducing Git Deployment
 ## Website Deployment using Git
 
-Requirements tools for archive our purpose of deploy a website, also we will using GitHub pages as our host for the site.
+Requirements tools for archive our purpose of deploy a website, also we will
+using GitHub pages as our host for the site.
 
 * Git
 * [GitHub](https://github.com) account
 * You webpage the you want to deploy
 
-Note: you should got already setup your ssh configuration with you GitHub account, if you don't have yet just take a look to the offcial documentation of [Adding a new SSH key to your GitHub account](https://goo.gl/zKoW6a).
+Note: you should got already setup your ssh configuration with you GitHub
+account, if you don't have yet just take a look to the offcial documentation of
+[Adding a new SSH key to your GitHub account](https://goo.gl/zKoW6a).
 
 ---
 
@@ -41,7 +44,8 @@ $ tree
 2 directories, 9 files
 ```
 
-From here we will start to use git's commands, firsly starting the local repository by typing on the shell.
+From here we will start to use git's commands, firsly starting the local repository
+by typing on the shell.
 
 ```bash
 $ git init
@@ -91,7 +95,10 @@ $ tree
 
 Here is [more about ```git init```](https://goo.gl/j2Kg5R)
 
-Ok! now we know what how to initizaliy a Git repository, but what we really need its to push up to GitHub our website, and for achivie this first we have to _clone_ our remote repo with the local one using the command `git remote` and also we need the _remote url_ of the repo on GitHub.
+Ok! now we know what how to initizaliy a Git repository, but what we really need
+its to push up to GitHub our website, and for achivie this first we have to
+_clone_ our remote repo with the local one using the command `git remote` and
+also we need the _remote url_ of the repo on GitHub.
 
 ```bash
 $ git remote add origin git@github.com:fulvi0/my_page.git
@@ -104,9 +111,11 @@ $ git remote -v
 origin	git@github.com:fulvi0/my_page.git (fetch)
 origin	git@github.com:fulvi0/my_page.git (push)
 ```
-Note: the flag `-v` its **verbose** and show the remote url; [here more about `git remote`](https://goo.gl/wGWIxx).
+Note: the flag `-v` its **verbose** and show the remote url; [here more about
+`git remote`](https://goo.gl/wGWIxx).
 
-After got ready our remote reposity on our local one lest see the status of our local repo added then the the _commit_ branch and _commit_ the files.
+After got ready our remote reposity on our local one lest see the status of our
+local repo added then the the _commit_ branch and _commit_ the files.
 
 ```bash
 $ git status
@@ -124,7 +133,11 @@ js/
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
-Then will add those files untacked to our _Master_ branch, but we are missing some step before add the files and is **fetch** and **pull** from the remote repo, in this case its because we were setting up the repository in GitHub we added a `README.md` file or local repo; if you skip this step you will get a error message saing `fatal: Not possible to fast-forward, aborting.`
+Then will add those files untacked to our _Master_ branch, but we are missing
+some step before add the files and is **fetch** and **pull** from the remote
+repo, in this case its because we were setting up the repository in GitHub we
+added a `README.md` file or local repo; if you skip this step you will get an 
+error message saing `fatal: Not possible to fast-forward, aborting.`
 
 To avoid such error lets run the following commands on the terminal.
 
@@ -172,7 +185,8 @@ new file:   js/jquery.js
 new file:   js/scrolling-nav.js
 ```
 
-And we'll _commit_ and add a message to identify our changes using the command [`git commit`](https://goo.gl/bUeeZh).
+And we'll _commit_ and add a message to identify our changes using the command
+[`git commit`](https://goo.gl/bUeeZh).
 
 ```bash
 $ git commit -m "I will push my webpage source code to github"
